@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/action_controller_node.dir/src/action_controller.cpp.o  -o /home/yang/ROS/devel/lib/stop_sign/action_controller_node -rdynamic 
