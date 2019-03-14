@@ -1,2 +1,2 @@
-object_control/src/stop_sign
+test
 -DCATKIN_DEVEL_PREFIX=/home/husarion/ROS/devel -DCMAKE_INSTALL_PREFIX=/home/husarion/ROS/install -G Unix Makefiles

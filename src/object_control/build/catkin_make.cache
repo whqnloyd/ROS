@@ -1,2 +1,0 @@
-
--DCATKIN_DEVEL_PREFIX=/home/husarion/ROS/object_control/devel -DCMAKE_INSTALL_PREFIX=/home/husarion/ROS/object_control/install -G Unix Makefiles
