@@ -392,15 +392,16 @@ clean: gtest/gtest/CMakeFiles/gtest_main.dir/clean
 # Convenience name for "all" pass in the directory.
 test/all: test/CMakeFiles/test_test_node.dir/all
 test/all: test/CMakeFiles/test_cal_avg_light.dir/all
+test/all: test/CMakeFiles/test_car_control.dir/all
 
 .PHONY : test/all
 
 # Convenience name for "clean" pass in the directory.
 test/clean: test/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 test/clean: test/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+test/clean: test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 test/clean: test/CMakeFiles/roscpp_generate_messages_py.dir/clean
 test/clean: test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-test/clean: test/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 test/clean: test/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 test/clean: test/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 test/clean: test/CMakeFiles/std_msgs_generate_messages_py.dir/clean
@@ -412,7 +413,8 @@ test/clean: test/CMakeFiles/test_test_node.dir/clean
 test/clean: test/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 test/clean: test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 test/clean: test/CMakeFiles/test_cal_avg_light.dir/clean
-test/clean: test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+test/clean: test/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+test/clean: test/CMakeFiles/test_car_control.dir/clean
 
 .PHONY : test/clean
 
@@ -486,6 +488,38 @@ clean: test/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ROS/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ROS/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ROS/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# clean rule for target.
+test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target test/CMakeFiles/roscpp_generate_messages_py.dir
 
 # All Build rule for target.
@@ -546,38 +580,6 @@ test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
 
 # clean rule for target.
 clean: test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target test/CMakeFiles/std_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-test/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make test/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ROS/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
-.PHONY : test/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ROS/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ROS/build/CMakeFiles 0
-.PHONY : test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# clean rule for target.
-test/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make test/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-.PHONY : test/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-
-# clean rule for target.
-clean: test/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 
 .PHONY : clean
 
@@ -812,7 +814,7 @@ clean: test/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 test/CMakeFiles/test_test_node.dir/all:
 	$(MAKE) -f test/CMakeFiles/test_test_node.dir/build.make test/CMakeFiles/test_test_node.dir/depend
 	$(MAKE) -f test/CMakeFiles/test_test_node.dir/build.make test/CMakeFiles/test_test_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ROS/build/CMakeFiles --progress-num=14,15 "Built target test_test_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ROS/build/CMakeFiles --progress-num=16,17 "Built target test_test_node"
 .PHONY : test/CMakeFiles/test_test_node.dir/all
 
 # Include target in all.
@@ -944,34 +946,71 @@ clean: test/CMakeFiles/test_cal_avg_light.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+# Target rules for target test/CMakeFiles/std_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ROS/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
-.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+test/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make test/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ROS/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
+.PHONY : test/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ROS/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ROS/build/CMakeFiles 0
-.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_py: test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+std_msgs_generate_messages_cpp: test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# clean rule for target.
-test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : std_msgs_generate_messages_cpp
 
 # clean rule for target.
-clean: test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+test/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make test/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : test/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: test/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/test_car_control.dir
+
+# All Build rule for target.
+test/CMakeFiles/test_car_control.dir/all:
+	$(MAKE) -f test/CMakeFiles/test_car_control.dir/build.make test/CMakeFiles/test_car_control.dir/depend
+	$(MAKE) -f test/CMakeFiles/test_car_control.dir/build.make test/CMakeFiles/test_car_control.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/husarion/ROS/build/CMakeFiles --progress-num=14,15 "Built target test_car_control"
+.PHONY : test/CMakeFiles/test_car_control.dir/all
+
+# Include target in all.
+all: test/CMakeFiles/test_car_control.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/test_car_control.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ROS/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_car_control.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/husarion/ROS/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/test_car_control.dir/rule
+
+# Convenience name for target.
+test_car_control: test/CMakeFiles/test_car_control.dir/rule
+
+.PHONY : test_car_control
+
+# clean rule for target.
+test/CMakeFiles/test_car_control.dir/clean:
+	$(MAKE) -f test/CMakeFiles/test_car_control.dir/build.make test/CMakeFiles/test_car_control.dir/clean
+.PHONY : test/CMakeFiles/test_car_control.dir/clean
+
+# clean rule for target.
+clean: test/CMakeFiles/test_car_control.dir/clean
 
 .PHONY : clean
 

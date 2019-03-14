@@ -78,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -110,17 +121,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
 
 # Special rule for the target test
 test:
@@ -196,6 +196,21 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/husarion/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 test/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/husarion/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : test/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -224,21 +239,6 @@ rosgraph_msgs_generate_messages_nodejs: test/CMakeFiles/rosgraph_msgs_generate_m
 rosgraph_msgs_generate_messages_nodejs/fast:
 	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/husarion/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 test/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
@@ -406,19 +406,34 @@ test_cal_avg_light/fast:
 .PHONY : test_cal_avg_light/fast
 
 # Convenience name for target.
-test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/husarion/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/husarion/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_py: test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+std_msgs_generate_messages_cpp: test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_cpp
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
+std_msgs_generate_messages_cpp/fast:
+	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+test/CMakeFiles/test_car_control.dir/rule:
+	cd /home/husarion/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_car_control.dir/rule
+.PHONY : test/CMakeFiles/test_car_control.dir/rule
+
+# Convenience name for target.
+test_car_control: test/CMakeFiles/test_car_control.dir/rule
+
+.PHONY : test_car_control
+
+# fast build rule for target.
+test_car_control/fast:
+	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/test_car_control.dir/build.make test/CMakeFiles/test_car_control.dir/build
+.PHONY : test_car_control/fast
 
 src/cal_avg_light.o: src/cal_avg_light.cpp.o
 
@@ -446,6 +461,33 @@ src/cal_avg_light.s: src/cal_avg_light.cpp.s
 src/cal_avg_light.cpp.s:
 	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/test_cal_avg_light.dir/build.make test/CMakeFiles/test_cal_avg_light.dir/src/cal_avg_light.cpp.s
 .PHONY : src/cal_avg_light.cpp.s
+
+src/car_control.o: src/car_control.cpp.o
+
+.PHONY : src/car_control.o
+
+# target to build an object file
+src/car_control.cpp.o:
+	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/test_car_control.dir/build.make test/CMakeFiles/test_car_control.dir/src/car_control.cpp.o
+.PHONY : src/car_control.cpp.o
+
+src/car_control.i: src/car_control.cpp.i
+
+.PHONY : src/car_control.i
+
+# target to preprocess a source file
+src/car_control.cpp.i:
+	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/test_car_control.dir/build.make test/CMakeFiles/test_car_control.dir/src/car_control.cpp.i
+.PHONY : src/car_control.cpp.i
+
+src/car_control.s: src/car_control.cpp.s
+
+.PHONY : src/car_control.s
+
+# target to generate assembly for a file
+src/car_control.cpp.s:
+	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/test_car_control.dir/build.make test/CMakeFiles/test_car_control.dir/src/car_control.cpp.s
+.PHONY : src/car_control.cpp.s
 
 src/test_node.o: src/test_node.cpp.o
 
@@ -484,9 +526,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... install/strip"
+	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... list_install_components"
@@ -501,12 +544,15 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... test_cal_avg_light"
 	@echo "... install"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... install/strip"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... test_car_control"
 	@echo "... test"
 	@echo "... src/cal_avg_light.o"
 	@echo "... src/cal_avg_light.i"
 	@echo "... src/cal_avg_light.s"
+	@echo "... src/car_control.o"
+	@echo "... src/car_control.i"
+	@echo "... src/car_control.s"
 	@echo "... src/test_node.o"
 	@echo "... src/test_node.i"
 	@echo "... src/test_node.s"
