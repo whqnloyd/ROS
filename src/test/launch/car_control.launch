@@ -5,7 +5,5 @@
 		<remap from="/image" to="/camera/rgb/image_raw"/>
 	</node>
 
-	<include file="$(find test)/launch/car_control.launch"/>
-	
-	<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard" name="car_control"/>
+	<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="keyboard_control"/>
 </launch>
