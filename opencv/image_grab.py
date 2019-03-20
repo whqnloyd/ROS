@@ -32,7 +32,7 @@ def displayWebcam():
     global count,bridge
     count = 0
     bridge = CvBridge()
-    rospy.Subscriber('webcam/image_raw', Image, callback)
+    rospy.Subscriber('/camera/rgb/image_raw', Image, callback)
     rospy.spin()
  
 if __name__ == '__main__':
