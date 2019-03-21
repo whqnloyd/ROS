@@ -9,14 +9,14 @@ def motion(command,linear_speed,angular_speed):
 	move_cmd = Twist()
 
 	if (command=='go'):
-	    for i in range(motion_time*rate):
+	    for i in range(20):
 	        move_cmd.linear.x = linear_speed
 	        cmd_vel.publish(move_cmd)
 		#r.sleep()
 	    return
     
 	if (command=='turn'):
-	    for i in range(motion_time*rate):
+	    for i in range(20):
 	        move_cmd.angular.z = angular_speed
 	        cmd_vel.publish(move_cmd)
 		#r.sleep()
@@ -52,14 +52,14 @@ def img_recog(data):
 	print(loc_x)
 	print(loc_y)
 
-	if 220<(loc_x+w/2) and (loc_x+w/2)<440:
+	if 100<(loc_x+w/2) and (loc_x+w/2)<220:
 		motion('go',0.2,0)
 		print('go ahead')
-	elif (loc_x+w/2)<=220:
-		motion('turn',0,-0.5)
+	elif (loc_x+w/2)<=100:
+		motion('turn',0,-1)
 		print('turn left')
-	elif (loc_x+w/2)>=440:
-		motion('turn',0,0.5)
+	elif (loc_x+w/2)>=220:
+		motion('turn',0,1)
 		print('turn right')
 	else:
 		stop()
@@ -69,7 +69,7 @@ def img_recog(data):
     else:
         pass
 
-template = cv2.imread('image/test_target.jpg', 0)
+template = cv2.imread('image/ttee.jpg', 0)
 w, h = template.shape[::-1]
 methods = ['cv2.TM_CCOEFF_NORMED']
 method = eval(methods[0])
@@ -79,8 +79,8 @@ count = 0
 bridge = CvBridge()
 rospy.Subscriber('/camera/rgb/image_raw', Image, img_recog)
 cmd_vel = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
-rate = 50
-r = rospy.Rate(rate)
-motion_time=1
+#rate = 50
+#r = rospy.Rate(rate)
+#motion_time=1
 rospy.spin()
 
