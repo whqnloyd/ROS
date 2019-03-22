@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import rospy
 import numpy as np
 from sensor_msgs.msg import Image
@@ -34,7 +36,7 @@ def stop():
 	#rospy.sleep(1)
 
 def img_recog(data):
-    scaling_factor = 0.5
+    scaling_factor = 0.9
     global count,bridge
     count = count + 1
     if count == 1:
