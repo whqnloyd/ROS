@@ -14,7 +14,7 @@ def motion(command,linear_speed,angular_speed):
 	        cmd_vel.publish(move_cmd)
 		#r.sleep()
 	    return
-    
+
 	if (command=='turn'):
 	    for i in range(20):
 	        move_cmd.angular.z = angular_speed
@@ -22,7 +22,7 @@ def motion(command,linear_speed,angular_speed):
 		#r.sleep()
 	    return
 
-	else: 
+	else:
 		print('wrong command, will stop')
 		move_cmd = Twist()
 		cmd_vel.publish(move_cmd)
@@ -49,8 +49,7 @@ def img_recog(data):
 	loc_y=np.median(thresh_loc[::-1][1])
 	if loc_x > 0 and loc_y > 0:
 		cv2.rectangle(cv_img, (int(loc_x), int(loc_y)), (int(loc_x+w), int(loc_y+h)), (0, 0, 255), 2)
-	print(loc_x)
-	print(loc_y)
+		print('x: %.2f, y: %.2f' % (loc_x, loc_y))
 
 	if 100<(loc_x+w/2) and (loc_x+w/2)<220:
 		motion('go',0.2,0)
@@ -83,4 +82,3 @@ cmd_vel = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
 #r = rospy.Rate(rate)
 #motion_time=1
 rospy.spin()
-
