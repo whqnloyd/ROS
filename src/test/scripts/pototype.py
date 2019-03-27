@@ -7,20 +7,20 @@ from cv_bridge import CvBridge, CvBridgeError
 import cv2
 from geometry_msgs.msg import Twist
 
-def motion(command,linear_speed,angular_speed):
+def motion(command,linear_speed,angular_speed):	
 	move_cmd = Twist()
 
 	if (command=='go'):
 	    for i in range(20):
-	        move_cmd.linear.x = linear_speed
-	        cmd_vel.publish(move_cmd)
+		move_cmd.linear.x = linear_speed
+		cmd_vel.publish(move_cmd)
 		#r.sleep()
 	    return
 
 	if (command=='turn'):
 	    for i in range(20):
-	        move_cmd.angular.z = angular_speed
-	        cmd_vel.publish(move_cmd)
+		move_cmd.angular.z = angular_speed
+		cmd_vel.publish(move_cmd)
 		#r.sleep()
 	    return
 
@@ -36,16 +36,15 @@ def stop():
 	#rospy.sleep(1)
 
 def img_recog(data):
-    scaling_factor = 0.9
+    #scaling_factor = 0.5
     global count,bridge
     count = count + 1
-    if count == 1:
-        count = 0
+    if count % 5 == 0:
         cv_img = bridge.imgmsg_to_cv2(data, "bgr8")
 	cv_img = cv2.resize(cv_img,(320,240))
 	img_1 = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
 	res = cv2.matchTemplate(img_1, template, method)
-	threshold = 0.5
+	threshold = 0.6
 	thresh_loc = np.where(res >= threshold)
 	loc_x=np.median(thresh_loc[::-1][0])
 	loc_y=np.median(thresh_loc[::-1][1])

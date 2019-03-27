@@ -1,0 +1,5 @@
+<launch>	
+	<include file="$(find astra_launch)/launch/astra.launch"/>
+
+	<node pkg="test" type="driver_pro.sh" name="driver_pro"/>
+</launch>
