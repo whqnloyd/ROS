@@ -1,9 +1,15 @@
 <launch>
+	<arg name="use_gazebo" default="false"/>
+	
 	<include file="$(find astra_launch)/launch/astra.launch"/>
+
+	<node pkg="test" type="driver_pro.sh" name="driver_pro" output="screen"/>
 
 	<node pkg="image_view" type="image_view" name="image_view">
 		<remap from="/image" to="/camera/rgb/image_raw"/>
 	</node>
 
-	<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="keyboard_control"/>
+	<include if="$(arg use_gazebo)" file="$(find rosbot_description)/launch/rosbot.launch"/>
+
+	<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="keyboard_control" output="screen"/>
 </launch>
