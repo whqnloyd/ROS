@@ -9,16 +9,15 @@ from geometry_msgs.msg import Twist
 
 def motion(command,linear_speed,angular_speed):	
 	move_cmd = Twist()
-
 	if (command=='go'):
-	    for i in range(20):
+	    for i in range(1):
 		move_cmd.linear.x = linear_speed
 		cmd_vel.publish(move_cmd)
 		#r.sleep()
 	    return
 
 	if (command=='turn'):
-	    for i in range(20):
+	    for i in range(1):
 		move_cmd.angular.z = angular_speed
 		cmd_vel.publish(move_cmd)
 		#r.sleep()
@@ -33,12 +32,13 @@ def motion(command,linear_speed,angular_speed):
 def stop():
 	rospy.loginfo("Stopping the robot...")
 	cmd_vel.publish(Twist())
-	#rospy.sleep(1)
+	#r.sleep()
 
 def img_recog(data):
-    #scaling_factor = 0.5
     global count,bridge
     count = count + 1
+    if count > 100:
+	count == 0
     if count % 5 == 0:
         cv_img = bridge.imgmsg_to_cv2(data, "bgr8")
 	cv_img = cv2.resize(cv_img,(320,240))
@@ -77,9 +77,7 @@ method = eval(methods[0])
 rospy.init_node('pototype', anonymous=True)
 count = 0
 bridge = CvBridge()
-rospy.Subscriber('/camera/rgb/image_raw', Image, img_recog)
 cmd_vel = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
-#rate = 50
-#r = rospy.Rate(rate)
-#motion_time=1
+rospy.Subscriber('/camera/rgb/image_raw', Image, img_recog)
+r = rospy.Rate(200)
 rospy.spin()
