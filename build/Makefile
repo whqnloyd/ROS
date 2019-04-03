@@ -452,6 +452,19 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named distance_test
+
+# Build rule for target.
+distance_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 distance_test
+.PHONY : distance_test
+
+# fast build rule for target.
+distance_test/fast:
+	$(MAKE) -f test/CMakeFiles/distance_test.dir/build.make test/CMakeFiles/distance_test.dir/build
+.PHONY : distance_test/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_nodejs
 
 # Build rule for target.
@@ -551,6 +564,7 @@ help:
 	@echo "... test_node"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... distance_test"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... cal_avg_light"

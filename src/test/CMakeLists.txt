@@ -134,6 +134,7 @@ include_directories(
 add_executable(test_node src/test_node.cpp)
 add_executable(cal_avg_light src/cal_avg_light.cpp)
 add_executable(object_fellow src/object_fellow.cpp)
+add_executable(distance_test src/distance_test.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -155,7 +156,9 @@ target_link_libraries(cal_avg_light
 target_link_libraries(object_fellow
    ${catkin_LIBRARIES}
  )
-
+target_link_libraries(distance_test
+   ${catkin_LIBRARIES}
+ )
 #############
 ## Install ##
 #############

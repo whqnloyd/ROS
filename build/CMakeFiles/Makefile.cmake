@@ -178,6 +178,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "test/CMakeFiles/test_node.dir/DependInfo.cmake"
   "test/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "test/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake"
+  "test/CMakeFiles/distance_test.dir/DependInfo.cmake"
   "test/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake"
   "test/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "test/CMakeFiles/cal_avg_light.dir/DependInfo.cmake"

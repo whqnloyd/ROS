@@ -46,6 +46,7 @@
 /home/husarion/ROS/build/test/CMakeFiles/install/local.dir
 /home/husarion/ROS/build/test/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
 /home/husarion/ROS/build/test/CMakeFiles/roscpp_generate_messages_lisp.dir
+/home/husarion/ROS/build/test/CMakeFiles/distance_test.dir
 /home/husarion/ROS/build/test/CMakeFiles/roscpp_generate_messages_nodejs.dir
 /home/husarion/ROS/build/test/CMakeFiles/std_msgs_generate_messages_eus.dir
 /home/husarion/ROS/build/test/CMakeFiles/cal_avg_light.dir

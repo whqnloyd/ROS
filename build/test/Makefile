@@ -361,6 +361,21 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
+test/CMakeFiles/distance_test.dir/rule:
+	cd /home/husarion/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/distance_test.dir/rule
+.PHONY : test/CMakeFiles/distance_test.dir/rule
+
+# Convenience name for target.
+distance_test: test/CMakeFiles/distance_test.dir/rule
+
+.PHONY : distance_test
+
+# fast build rule for target.
+distance_test/fast:
+	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/distance_test.dir/build.make test/CMakeFiles/distance_test.dir/build
+.PHONY : distance_test/fast
+
+# Convenience name for target.
 test/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
 	cd /home/husarion/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : test/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
@@ -462,6 +477,33 @@ src/cal_avg_light.cpp.s:
 	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/cal_avg_light.dir/build.make test/CMakeFiles/cal_avg_light.dir/src/cal_avg_light.cpp.s
 .PHONY : src/cal_avg_light.cpp.s
 
+src/distance_test.o: src/distance_test.cpp.o
+
+.PHONY : src/distance_test.o
+
+# target to build an object file
+src/distance_test.cpp.o:
+	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/distance_test.dir/build.make test/CMakeFiles/distance_test.dir/src/distance_test.cpp.o
+.PHONY : src/distance_test.cpp.o
+
+src/distance_test.i: src/distance_test.cpp.i
+
+.PHONY : src/distance_test.i
+
+# target to preprocess a source file
+src/distance_test.cpp.i:
+	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/distance_test.dir/build.make test/CMakeFiles/distance_test.dir/src/distance_test.cpp.i
+.PHONY : src/distance_test.cpp.i
+
+src/distance_test.s: src/distance_test.cpp.s
+
+.PHONY : src/distance_test.s
+
+# target to generate assembly for a file
+src/distance_test.cpp.s:
+	cd /home/husarion/ROS/build && $(MAKE) -f test/CMakeFiles/distance_test.dir/build.make test/CMakeFiles/distance_test.dir/src/distance_test.cpp.s
+.PHONY : src/distance_test.cpp.s
+
 src/object_fellow.o: src/object_fellow.cpp.o
 
 .PHONY : src/object_fellow.o
@@ -540,6 +582,7 @@ help:
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... distance_test"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... cal_avg_light"
@@ -550,6 +593,9 @@ help:
 	@echo "... src/cal_avg_light.o"
 	@echo "... src/cal_avg_light.i"
 	@echo "... src/cal_avg_light.s"
+	@echo "... src/distance_test.o"
+	@echo "... src/distance_test.i"
+	@echo "... src/distance_test.s"
 	@echo "... src/object_fellow.o"
 	@echo "... src/object_fellow.i"
 	@echo "... src/object_fellow.s"
