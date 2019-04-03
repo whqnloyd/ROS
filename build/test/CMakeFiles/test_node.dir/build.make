@@ -57,38 +57,38 @@ include test/CMakeFiles/test_node.dir/progress.make
 # Include the compile flags for this target's objects.
 include test/CMakeFiles/test_node.dir/flags.make
 
-test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o: test/CMakeFiles/test_node.dir/flags.make
-test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o: /home/husarion/ROS/src/test/src/cal_avg_light.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/husarion/ROS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o"
-	cd /home/husarion/ROS/build/test && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o -c /home/husarion/ROS/src/test/src/cal_avg_light.cpp
+test/CMakeFiles/test_node.dir/src/test_node.cpp.o: test/CMakeFiles/test_node.dir/flags.make
+test/CMakeFiles/test_node.dir/src/test_node.cpp.o: /home/husarion/ROS/src/test/src/test_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/husarion/ROS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/test_node.dir/src/test_node.cpp.o"
+	cd /home/husarion/ROS/build/test && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_node.dir/src/test_node.cpp.o -c /home/husarion/ROS/src/test/src/test_node.cpp
 
-test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_node.dir/src/cal_avg_light.cpp.i"
-	cd /home/husarion/ROS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/husarion/ROS/src/test/src/cal_avg_light.cpp > CMakeFiles/test_node.dir/src/cal_avg_light.cpp.i
+test/CMakeFiles/test_node.dir/src/test_node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_node.dir/src/test_node.cpp.i"
+	cd /home/husarion/ROS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/husarion/ROS/src/test/src/test_node.cpp > CMakeFiles/test_node.dir/src/test_node.cpp.i
 
-test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_node.dir/src/cal_avg_light.cpp.s"
-	cd /home/husarion/ROS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/husarion/ROS/src/test/src/cal_avg_light.cpp -o CMakeFiles/test_node.dir/src/cal_avg_light.cpp.s
+test/CMakeFiles/test_node.dir/src/test_node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_node.dir/src/test_node.cpp.s"
+	cd /home/husarion/ROS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/husarion/ROS/src/test/src/test_node.cpp -o CMakeFiles/test_node.dir/src/test_node.cpp.s
 
-test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o.requires:
+test/CMakeFiles/test_node.dir/src/test_node.cpp.o.requires:
 
-.PHONY : test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o.requires
+.PHONY : test/CMakeFiles/test_node.dir/src/test_node.cpp.o.requires
 
-test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o.provides: test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o.requires
-	$(MAKE) -f test/CMakeFiles/test_node.dir/build.make test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o.provides.build
-.PHONY : test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o.provides
+test/CMakeFiles/test_node.dir/src/test_node.cpp.o.provides: test/CMakeFiles/test_node.dir/src/test_node.cpp.o.requires
+	$(MAKE) -f test/CMakeFiles/test_node.dir/build.make test/CMakeFiles/test_node.dir/src/test_node.cpp.o.provides.build
+.PHONY : test/CMakeFiles/test_node.dir/src/test_node.cpp.o.provides
 
-test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o.provides.build: test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o
+test/CMakeFiles/test_node.dir/src/test_node.cpp.o.provides.build: test/CMakeFiles/test_node.dir/src/test_node.cpp.o
 
 
 # Object files for target test_node
 test_node_OBJECTS = \
-"CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o"
+"CMakeFiles/test_node.dir/src/test_node.cpp.o"
 
 # External object files for target test_node
 test_node_EXTERNAL_OBJECTS =
 
-/home/husarion/ROS/devel/lib/test/test_node: test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o
+/home/husarion/ROS/devel/lib/test/test_node: test/CMakeFiles/test_node.dir/src/test_node.cpp.o
 /home/husarion/ROS/devel/lib/test/test_node: test/CMakeFiles/test_node.dir/build.make
 /home/husarion/ROS/devel/lib/test/test_node: /opt/ros/kinetic/lib/libroscpp.so
 /home/husarion/ROS/devel/lib/test/test_node: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
@@ -118,7 +118,7 @@ test/CMakeFiles/test_node.dir/build: /home/husarion/ROS/devel/lib/test/test_node
 
 .PHONY : test/CMakeFiles/test_node.dir/build
 
-test/CMakeFiles/test_node.dir/requires: test/CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o.requires
+test/CMakeFiles/test_node.dir/requires: test/CMakeFiles/test_node.dir/src/test_node.cpp.o.requires
 
 .PHONY : test/CMakeFiles/test_node.dir/requires
 

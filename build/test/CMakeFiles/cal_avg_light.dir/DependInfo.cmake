@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/husarion/ROS/src/test/src/test_node.cpp" "/home/husarion/ROS/build/test/CMakeFiles/test_node.dir/src/test_node.cpp.o"
+  "/home/husarion/ROS/src/test/src/cal_avg_light.cpp" "/home/husarion/ROS/build/test/CMakeFiles/cal_avg_light.dir/src/cal_avg_light.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -42,7 +42,6 @@ void objectCallback(const std_msgs::Float32MultiArrayPtr &object) {
 }
 
 int main(int argc, char **argv) {
-
    ros::init(argc, argv, "action_controller");
    ros::NodeHandle n("~");
    ros::Rate loop_rate(50);

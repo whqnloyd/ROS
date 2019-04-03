@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_node.dir/src/cal_avg_light.cpp.o"
+  "CMakeFiles/test_node.dir/src/test_node.cpp.o"
   "/home/husarion/ROS/devel/lib/test/test_node.pdb"
   "/home/husarion/ROS/devel/lib/test/test_node"
 )

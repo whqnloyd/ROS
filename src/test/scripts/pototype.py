@@ -8,31 +8,22 @@ import cv2
 from geometry_msgs.msg import Twist
 
 def motion(command,linear_speed,angular_speed):	
+	global cmd_vel
 	move_cmd = Twist()
 	if (command=='go'):
-	    for i in range(1):
 		move_cmd.linear.x = linear_speed
-		cmd_vel.publish(move_cmd)
-		#r.sleep()
-	    return
-
-	if (command=='turn'):
-	    for i in range(1):
+	elif (command=='turn'):
 		move_cmd.angular.z = angular_speed
-		cmd_vel.publish(move_cmd)
-		#r.sleep()
-	    return
-
 	else:
 		print('wrong command, will stop')
-		move_cmd = Twist()
-		cmd_vel.publish(move_cmd)
-		#r.sleep()
+	cmd_vel.publish(move_cmd)
+
+	return
 
 def stop():
 	rospy.loginfo("Stopping the robot...")
 	cmd_vel.publish(Twist())
-	#r.sleep()
+	return
 
 def img_recog(data):
     global count,bridge
@@ -68,6 +59,7 @@ def img_recog(data):
         cv2.waitKey(1)
     else:
         pass
+    return
 
 template = cv2.imread('image/ttee.jpg', 0)
 w, h = template.shape[::-1]
@@ -79,5 +71,4 @@ count = 0
 bridge = CvBridge()
 cmd_vel = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
 rospy.Subscriber('/camera/rgb/image_raw', Image, img_recog)
-r = rospy.Rate(200)
 rospy.spin()
