@@ -8,9 +8,11 @@
 #define ARROW_LEFT 3
 #define ARROW_UP 5
 #define ARROW_DOWN 6
+
 int id = 0;
 ros::Publisher action_pub;
 geometry_msgs::Twist set_vel;
+
 int camera_center = 320; // left 0, right 640
 float max_ang_vel = 0.6;
 float min_ang_vel = 0.4;
@@ -96,6 +98,7 @@ int main(int argc, char **argv) {
    str.append("");
    std::to_string(3);
    s.data = str;
+
    ros::init(argc, argv, "action_controller");
    ros::NodeHandle n("~");
    ros::Subscriber sub = n.subscribe("/objects", 1, objectCallback);
