@@ -8,7 +8,7 @@ add_compile_options(-std=c++11)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
+  roscpp tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -135,6 +135,7 @@ add_executable(test_node src/test_node.cpp)
 add_executable(cal_avg_light src/cal_avg_light.cpp)
 add_executable(object_fellow src/object_fellow.cpp)
 add_executable(distance_test src/distance_test.cpp)
+add_executable(track_car src/track_car.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -157,6 +158,9 @@ target_link_libraries(object_fellow
    ${catkin_LIBRARIES}
  )
 target_link_libraries(distance_test
+   ${catkin_LIBRARIES}
+ )
+target_link_libraries(track_car
    ${catkin_LIBRARIES}
  )
 #############

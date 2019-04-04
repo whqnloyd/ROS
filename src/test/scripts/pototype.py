@@ -47,10 +47,10 @@ def img_recog(data):
 		motion('go',0.2,0)
 		print('go ahead')
 	elif (loc_x+w/2)<=100:
-		motion('turn',0,-1)
+		motion('turn',0,1)
 		print('turn left')
 	elif (loc_x+w/2)>=220:
-		motion('turn',0,1)
+		motion('turn',0,-1)
 		print('turn right')
 	else:
 		stop()
